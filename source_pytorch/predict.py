@@ -45,12 +45,16 @@ def input_fn(serialized_input_data, content_type):
     print('Deserializing the input data.')
     if content_type == NP_CONTENT_TYPE:
         return np.frombuffer(serialized_input_data)
+    else:
+        return np.frombuffer(serialized_input_data)
     raise Exception('Requested unsupported ContentType in content_type: ' + content_type)
 
 # Provided output data handling
 def output_fn(prediction_output, accept):
     print('Serializing the generated output.')
     if accept == NP_CONTENT_TYPE:
+        return prediction_output.tostring()
+    else:
         return prediction_output.tostring()
     raise Exception('Requested unsupported ContentType in Accept: ' + accept)
 
