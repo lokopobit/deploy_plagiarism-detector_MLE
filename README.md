@@ -30,3 +30,34 @@ The project is divided in three notebooks, each of them performing a data modell
 * Train your model and deploy it using SageMaker.
 * Evaluate your deployed classifier.
 
+### Jupyter notebooks workflow detailed
+#### First notebook: Data Exploration
+
+
+1. Get the data: the dataset is uploaded at [University of Sheffield](https://ir.shef.ac.uk/cloughie/resources/plagiarism_corpus.html "University of Sheffield").
+2. Define types of plagiasm: copy-pasted from source (cut), copied and paraphrased from source (light)n based on source but expressed differently (heavy) and not plagiarized (non). As you can image the type of plagiarism heavy is the most challenging.  
+3. Study the distribution of the data: the dataset contains only 100 texts (very small) evenly distributed across the 5 different tasks (the tasks are questions and the texts are the answers). The original answers from wikipedia (source text) are also provided. The records are fiarly balanced with respect to the plagisism types.
+
+
+#### Second notebook: Feature Engineering
+
+
+
+
+#### Third notebook: Training and Deployment
+
+
+
+### Changes between old sagemaker version (1) and latest (2)
+
+See changes\_in\_sagemaker\_version.txt. Take a look to [sagemaker latest version](https://sagemaker.readthedocs.io/en/stable/v2.html "sagemaker latest version").
+
+
+### Reviewer comments
+
+Suggestions: in the second notebook, function make\_csv(), get rid of any incomplete rows using dropna() method of da pandas DataFrame. This could increase  the test accuracy.
+
+### TODO list
+
+
+
